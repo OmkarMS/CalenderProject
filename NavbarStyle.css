@@ -1,0 +1,49 @@
+.navPadding{
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    /* background-color: blue; */
+}
+
+.project{
+    font-family: 'monospace';
+    color: dimgray;
+    font-size: 35px;
+}
+
+.monthOption{
+    background-color: #fff;
+    border-style: none;
+    font-size: 22px;
+    font-family: 'monospace';
+    color: dimgray;
+    align-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.yearOption{
+    background-color: #fff;
+    border-style: none;
+    font-size: 21px;
+    font-family: 'monospace';
+    color: dimgray;
+    align-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.user{
+    border-width: 2px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 30px;
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    font-family: 'monospace';
+    color: dimgray;
+    align-content: center;
+}

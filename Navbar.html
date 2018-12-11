@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="NavbarStyle.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <div>
+                    <img class="navPadding" src="CalenderLogo.jpeg" width="50" height="50">
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p class="project">Calender</p>
+                </div>
+            </td>
+            <td style="padding-left: 250px">
+                <div>
+                    <select class="monthOption">
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                </div>
+            </td>
+            <td style="padding-left: 80px">
+                <select class="yearOption">
+                    <script>
+                        for (i = 1900; i <= 2050; i++) {
+                            document.write(('<option>' + i + '</option>'));
+                        }
+                    </script>
+                </select>
+            </td>
+            <td style="padding-left: 300px">
+                <div class="user">
+                    <p>Welcome User</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
