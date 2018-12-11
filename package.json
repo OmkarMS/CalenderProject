@@ -1,0 +1,23 @@
+{
+  "name": "calenderproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tempNodeServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmkarMS/CalenderProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmkarMS/CalenderProject/issues"
+  },
+  "homepage": "https://github.com/OmkarMS/CalenderProject#readme",
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "httpserver": "^0.3.0"
+  }
+}

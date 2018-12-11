@@ -1,15 +1,32 @@
 var http = require('http');
 var fs = require('fs');
 
-const PORT=8080; 
+const getResponse = (response, contentType, fileURL) => {
+    response.writeHead(200, { 'Content-type': contentType });
+    fs.readFile(fileURL, (err, html) => {
+        if (err) {
+            throw err;
+        }
+        response.write(html);
+        response.end();
+    });
+}
 
-fs.readFile('./Navbar.html', function (err, html) {
 
-    if (err) throw err;    
+http.createServer(function (request, response) {
+    console.log(request.url);
 
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(PORT);
-});
+    switch (request.url) {
+        case '/Navbar.html':
+            getResponse(response, 'text/html', './Navbar.html')
+            break;
+        case '/NavbarStyle.css':
+            getResponse(response, 'text/css', './NavbarStyle.css')
+            break;
+        case '/CalenderLogo.jpeg':
+            getResponse(response, 'image/jpg', './CalenderLogo.jpeg')
+            break;
+        default:
+            getResponse(response, 'text/html', './Navbar.html')
+    }
+}).listen(8080);
