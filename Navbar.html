@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="NavbarStyle.css">
+    <link rel="stylesheet" href="new.css">
 </head>
 
 <body>
@@ -20,24 +21,24 @@
             </td>
             <td style="padding-left: 250px">
                 <div>
-                    <select class="monthOption">
-                        <option>January</option>
-                        <option>February</option>
-                        <option>March</option>
-                        <option>April</option>
-                        <option>May</option>
-                        <option>June</option>
-                        <option>July</option>
-                        <option>August</option>
-                        <option>September</option>
-                        <option>October</option>
-                        <option>November</option>
-                        <option>December</option>
+                    <select class="monthOption" id="monthList" onchange="generateGrid();">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
                     </select>
                 </div>
             </td>
             <td style="padding-left: 80px">
-                <select class="yearOption">
+                <select class="yearOption" id="year" onchange="generateGrid();">
                     <script>
                         for (i = 1900; i <= 2050; i++) {
                             document.write(('<option>' + i + '</option>'));
@@ -52,6 +53,40 @@
             </td>
         </tr>
     </table>
+    <div class="headRow1">
+        <div id="hhhh" onclick="takeInput(this);">SUN</div>
+        <div>MON</div>
+        <div>TUE</div>
+        <div>WED</div>
+        <div>THU</div>
+        <div>FRI</div>
+        <div>SAT</div>
+    </div>
+    <hr>
+    <div id="calenderGrid"></div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <input type="text" id="inputBox">
+            </div>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
+                <button id="ok">ADD EVENT</button>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
